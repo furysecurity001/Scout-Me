@@ -91,3 +91,34 @@ python3 scout_me.py
 
 
 ## 📁 Project Structure
+scout-me/
+├── scout_me.py # Main application
+├── requirements.txt # Python dependencies
+├── README.md # This file
+└── leads/ # Output directory (auto-created)
+├── *.txt
+└── *.csv
+
+📖 Usage Guide
+Interactive Mode
+Launch the tool and follow the prompts:
+```bash
+python scout_me.py
+```
+Prompt	Default	Example
+Target Country	Nigeria	USA, UK, Ghana, Kenya
+State / City	Abuja	Lagos, New York, London
+Business Category	Salon	Plumbers, Gyms, Restaurants
+Maximum leads to collect	20	50, 100
+Run in headless mode?	No	Yes (runs in background)
+
+**Command-Line Mode**
+
+```bash
+python scout_me.py -q "Plumbers in Lagos, Nigeria" -m 30 --headless
+```
+
+Flag	Description	Default
+-q, --query	Search query	Required
+-m, --max	Maximum leads to collect	20
+--headless	Run browser in background	False
