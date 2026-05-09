@@ -4,37 +4,61 @@
 ![Playwright](https://img.shields.io/badge/Playwright-1.40+-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+[![Contact](https://img.shields.io/badge/Contact-@furysec-2CA5E0?logo=telegram&logoColor=white)](https://t.me/furysec)
+
+
 ## 📌 Overview
 
 **SCOUT-ME** is a powerful lead generation tool that scrapes Google Maps to find businesses **without proper websites** - perfect for web developers, digital agencies, and marketers looking to offer website development services.
 
-### 🎯 Key Features
+It identifies two types of leads:
+- ✅ Businesses with **no website** at all
+- ◆ Businesses using **social media / free builder** pages
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ ███████╗ ██████╗ ██████╗ ██╗ ██╗████████╗ ███╗ ███╗███████╗ ║
+║ ██╔════╝██╔═══██╗██╔══██╗██║ ██║╚══██╔══╝ ████╗ ████║██╔════╝ ║
+║ ███████╗██║ ██║██║ ██║██║ ██║ ██║ ██╔████╔██║█████╗ ║
+║ ╚════██║██║ ██║██║ ██║██║ ██║ ██║ ██║╚██╔╝██║██╔══╝ ║
+║ ███████║╚██████╔╝██████╔╝╚██████╔╝ ██║ ██║ ╚═╝ ██║███████╗ ║
+║ ╚══════╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═╝ ╚═╝╚══════╝ V2.6 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+
+## 🎯 Key Features
+
 - 🔍 Scrapes Google Maps for businesses by category and location
 - 🚫 Filters businesses with no website or only social media/free builder sites
-- 📞 Extracts business names and phone numbers
-- 💾 Saves leads in both CSV and TXT formats
-- 🖥️ Interactive CLI with beautiful UI (Rich library)
-- 🌐 Support for any country, state, and business category
-- ⚡ Headless mode for background operation
-- 🛡️ Auto-handles Google consent pages
+- 📞 Extracts business names and phone numbers (multiple detection patterns)
+- 💾 Saves leads in both **CSV** and **TXT** formats
+- 🖥️ Beautiful interactive CLI with Rich library
+- 🌐 Works for any country, state, and business category
+- ⚡ Headless mode for fast background operation
+- 🛡️ Auto-handles Google consent/cookie pages
 - 🔗 Direct URL scraping for reliable data extraction
+- 📜 Smart scrolling collects all listing URLs before processing
 
 ### 🏷️ Unofficial Websites Detected
-Businesses using these are flagged as leads:
-- **Social Media:** Facebook, Instagram, Twitter/X, LinkedIn, TikTok
-- **Messaging:** WhatsApp (wa.me)
-- **Bio Links:** Linktree, Carrd, About.me
-- **Free Builders:** Wix, Weebly, WordPress.com, Blogspot, Google Sites
+
+Businesses using these platforms are flagged as potential leads:
+
+| Category | Platforms |
+|----------|-----------|
+| Social Media | Facebook, Instagram, Twitter/X, LinkedIn, TikTok |
+| Messaging | WhatsApp (wa.me) |
+| Bio Links | Linktree, Carrd, About.me |
+| Free Builders | Wix, Weebly, WordPress.com, Blogspot, Google Sites |
+
+
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+- **Python 3.8 or higher** - [Download](https://www.python.org/downloads/)
+- **pip** (comes with Python)
 
 ### Installation
 
-#### **Option 1: From Source**
+#### Option 1: From Source
 ```bash
 # 1. Download and extract ScoutME_v2.6.zip
 # 2. Open terminal in the extracted folder
@@ -42,8 +66,28 @@ Businesses using these are flagged as leads:
 # 3. Install Python dependencies
 pip install -r requirements.txt
 
-# 4. Install Playwright browsers
+# 4. Install Playwright Chromium browser
 python -m playwright install chromium
 
 # 5. Run the tool
 python scout_me.py
+```
+#### Option 2: From Source
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python -m playwright install chromium
+python scout_me.py
+
+# Linux/Mac
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python -m playwright install chromium
+python3 scout_me.py
+```
+
+
+## 📁 Project Structure
