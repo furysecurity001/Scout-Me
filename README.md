@@ -92,11 +92,17 @@ python3 scout_me.py
 
 ## 📁 Project Structure
 scout-me/
+
 ├── scout_me.py # Main application
+
 ├── requirements.txt # Python dependencies
+
 ├── README.md # This file
+
 └── leads/ # Output directory (auto-created)
+
 ├── *.txt
+
 └── *.csv
 
 📖 Usage Guide
